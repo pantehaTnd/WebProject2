@@ -11,7 +11,11 @@ public class HospitalAppointmentDbContext : IdentityDbContext<ApplicationUser>
         : base(options)
     {
     }
-    //public DbSet<DoctorModel> Doctors { get; set; }
+    public DbSet<Doctor> Doctor { get; set; }
+    public DbSet<Department> Department { get; set; }
+    
+
+
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -20,4 +24,5 @@ public class HospitalAppointmentDbContext : IdentityDbContext<ApplicationUser>
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
     }
+    
 }
